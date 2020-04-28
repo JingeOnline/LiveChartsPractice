@@ -9,10 +9,8 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <DockPanel>
-            <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" Margin="0,8,0,0">
-                <TextBlock Text="描述："/>
-                <TextBlock x:Name="TextBlock_Description" Text="{Binding Description}"/>
-            </StackPanel>
+            <TextBlock x:Name="TextBlock_Description" Text="{Binding Description}" TextWrapping="Wrap"
+                           DockPanel.Dock="Bottom" Margin="0,8,0,0"/>
             <lvc:CartesianChart Series="{Binding Series}"/>
         </DockPanel>
     </Grid>
