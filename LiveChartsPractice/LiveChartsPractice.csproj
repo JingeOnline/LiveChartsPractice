@@ -61,11 +61,32 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="UserControls\UserControl_Chart.xaml.cs">
-      <DependentUpon>UserControl_Chart.xaml</DependentUpon>
+    <Compile Include="UserControls\UC_ColumnChart_1.xaml.cs">
+      <DependentUpon>UC_ColumnChart_1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UserControl_Chart_Advanced.xaml.cs">
-      <DependentUpon>UserControl_Chart_Advanced.xaml</DependentUpon>
+    <Compile Include="UserControls\UC_ColumnChart_4.xaml.cs">
+      <DependentUpon>UC_ColumnChart_4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_ColumnChart_3.xaml.cs">
+      <DependentUpon>UC_ColumnChart_3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_ColumnChart_2.xaml.cs">
+      <DependentUpon>UC_ColumnChart_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_LineChart_1.xaml.cs">
+      <DependentUpon>UC_LineChart_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_LineChart_2.xaml.cs">
+      <DependentUpon>UC_LineChart_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_LineChart_3.xaml.cs">
+      <DependentUpon>UC_LineChart_3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_RowChart_1.xaml.cs">
+      <DependentUpon>UC_RowChart_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl_TabContent.xaml.cs">
+      <DependentUpon>UserControl_TabContent.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -80,11 +101,39 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="UserControls\UserControl_Chart.xaml">
+    <Page Include="UserControls\UC_ColumnChart_1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\UserControl_Chart_Advanced.xaml">
+    <Page Include="UserControls\UC_ColumnChart_4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\UC_ColumnChart_3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\UC_ColumnChart_2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UC_LineChart_1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UC_LineChart_2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UC_LineChart_3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UC_RowChart_1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserControl_TabContent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -6,14 +6,12 @@
         xmlns:local="clr-namespace:LiveChartsPractice"
         xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         mc:Ignorable="d"
-        Title="LiveCharts" Height="450" Width="800">
+        Title="LiveCharts" Height="600" Width="1000">
     <Grid Margin="8">
         <TabControl x:Name="TabControl_HomePage" SelectionChanged="TabControl_HomePage_SelectionChanged">
             <TabItem Header="ColumnChart" x:Name="TabItem_Columnchart"/>
             <TabItem Header="LineChart" x:Name="TabItem_Linechart"/>
             <TabItem Header="RowChart" x:Name="TabItem_Rowchart"/>
-            <TabItem Header="ColumnChart_Advanced" x:Name="TabItem_Columnchart_1"/>
-            <TabItem Header="LineChart_Advanced" x:Name="TabItem_Linechart_1"/>
         </TabControl>
     </Grid>
 </Window>
