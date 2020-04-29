@@ -75,6 +75,46 @@ namespace LiveChartsPractice
 
                     tabItem.Content = rowChartTab;
                     break;
+                case "BubbleChart":
+                    UserControl_TabContent bubbleChartTab = new UserControl_TabContent();
+                    bubbleChartTab.TabLabelTitle = tabHead;
+
+                    List<UserControl> bubbleControlList = new List<UserControl>();
+                    bubbleControlList.Add(new UC_BubbleChart_1());
+                    bubbleChartTab.UserControlList = bubbleControlList;
+
+                    tabItem.Content = bubbleChartTab;
+                    break;
+                case "PieChart":
+                    UserControl_TabContent pieChartTab = new UserControl_TabContent();
+                    pieChartTab.TabLabelTitle = tabHead;
+
+                    List<UserControl> pieControlList = new List<UserControl>();
+                    pieControlList.Add(new UC_PieChart_1());
+                    pieChartTab.UserControlList = pieControlList;
+
+                    tabItem.Content = pieChartTab;
+                    break;
+                case "AngularGauge":
+                    UserControl_TabContent angularGaugeTab = new UserControl_TabContent();
+                    angularGaugeTab.TabLabelTitle = tabHead;
+
+                    List<UserControl> angularGaugeList = new List<UserControl>();
+                    angularGaugeList.Add(new UC_AngularGauge_1());
+                    angularGaugeTab.UserControlList = angularGaugeList;
+
+                    tabItem.Content = angularGaugeTab;
+                    break;
+                case "Gauge":
+                    UserControl_TabContent gaugeTab = new UserControl_TabContent();
+                    gaugeTab.TabLabelTitle = tabHead;
+
+                    List<UserControl> gaugeList = new List<UserControl>();
+                    gaugeList.Add(new UC_SolidGauge_1());
+                    gaugeTab.UserControlList = gaugeList;
+
+                    tabItem.Content = gaugeTab;
+                    break;
             }
         }
     }

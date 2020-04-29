@@ -12,6 +12,10 @@
             <TabItem Header="ColumnChart" x:Name="TabItem_Columnchart"/>
             <TabItem Header="LineChart" x:Name="TabItem_Linechart"/>
             <TabItem Header="RowChart" x:Name="TabItem_Rowchart"/>
+            <TabItem Header="BubbleChart" x:Name="TabItem_Bubblechart"/>
+            <TabItem Header="PieChart" x:Name="TabItem_PieChart"/>
+            <TabItem Header="AngularGauge" x:Name="TabItem_AngularGauge"/>
+            <TabItem Header="Gauge" x:Name="TabItem_Gauge"/>
         </TabControl>
     </Grid>
 </Window>

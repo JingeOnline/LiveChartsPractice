@@ -24,10 +24,10 @@ namespace LiveChartsPractice.UserControls
     {
         //窗口下面的描述文字
         public string Description { get; set; }
-        //图表
-        public SeriesCollection Series { get; set; }
         //图表的名称
         public string ChartName { get; set; }
+        //图表
+        public SeriesCollection Series { get; set; }
         //坐标轴的Title
         public string Axis_X_Title { get; set; }
         public string Axis_Y_Title { get; set; }
