@@ -115,6 +115,26 @@ namespace LiveChartsPractice
 
                     tabItem.Content = gaugeTab;
                     break;
+                case "StackedColumn":
+                    UserControl_TabContent stackTab = new UserControl_TabContent();
+                    stackTab.TabLabelTitle = tabHead;
+
+                    List<UserControl> stackList = new List<UserControl>();
+                    stackList.Add(new UC_StackedColumnChart_1());
+                    stackTab.UserControlList = stackList;
+
+                    tabItem.Content = stackTab;
+                    break;
+                case "StackedArea":
+                    UserControl_TabContent stackedAreaTab = new UserControl_TabContent();
+                    stackedAreaTab.TabLabelTitle = tabHead;
+
+                    List<UserControl> stackedAreaList = new List<UserControl>();
+                    stackedAreaList.Add(new UC_StackedArea_1());
+                    stackedAreaTab.UserControlList = stackedAreaList;
+
+                    tabItem.Content = stackedAreaTab;
+                    break;
             }
         }
     }

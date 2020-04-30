@@ -10,6 +10,8 @@
     <Grid Margin="8">
         <TabControl x:Name="TabControl_HomePage" SelectionChanged="TabControl_HomePage_SelectionChanged">
             <TabItem Header="ColumnChart" x:Name="TabItem_Columnchart"/>
+            <TabItem Header="StackedColumn" x:Name="TabItem_StackedColumn"/>
+            <TabItem Header="StackedArea" x:Name="TabItem_StackedArea"/>
             <TabItem Header="LineChart" x:Name="TabItem_Linechart"/>
             <TabItem Header="RowChart" x:Name="TabItem_Rowchart"/>
             <TabItem Header="BubbleChart" x:Name="TabItem_Bubblechart"/>
