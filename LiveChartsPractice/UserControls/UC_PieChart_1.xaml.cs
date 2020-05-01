@@ -31,9 +31,11 @@ namespace LiveChartsPractice.UserControls
         {
             InitializeComponent();
 
-            Description = "基本饼图（完全xaml），只设置了Title名称和Value的数值，他就会自动生成百分比的饼图。";
+            Description = "基本饼图（完全xaml），只设置了Title名称和Value的数值，他就会自动生成百分比的饼图。"
+                +"\n"+ "是否在悬停的时候产生“分裂”动画效果Hoverable=\"True\"";
             ChartName = "基本饼图（完全xaml）";
             DataContext = this;
         }
+
     }
 }

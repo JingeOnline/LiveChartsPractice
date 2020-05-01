@@ -20,7 +20,7 @@ namespace LiveChartsPractice.UserControls
     /// <summary>
     /// UC_ColumnChart_2.xaml 的交互逻辑
     /// </summary>
-    public partial class UC_ColumnChart_2 : UserControl
+    public partial class UC_ColumnChart_2_G : UserControl
     {
         //窗口下面的描述文字
         public string Description { get; set; }
@@ -38,7 +38,7 @@ namespace LiveChartsPractice.UserControls
         //图例的位置
         public LegendLocation LegendLocation { get; set; }
 
-        public UC_ColumnChart_2()
+        public UC_ColumnChart_2_G()
         {
             InitializeComponent();
             Series = new SeriesCollection();
@@ -47,17 +47,30 @@ namespace LiveChartsPractice.UserControls
             ColumnSeries column1 = new ColumnSeries();
             column1.Title = "Pork";
             column1.Values = new ChartValues<double> { 4, 6, 5, 2, 4 };
+            //自定义LabelPoint
+            column1.LabelPoint = point => "x轴坐标值："+point.X + ", y轴坐标值：" + point.Y;
+            //在图表上显示DataLabel
+            column1.DataLabels = true;
             Series.Add(column1);
             
             //实体2
             ColumnSeries column2 = new ColumnSeries();
             column2.Title = "Lamb";
             column2.Values = new ChartValues<double> { 5, 9, 4, 8, 5 };
+            //自定义LabelPoint
+            column2.LabelPoint = point => "x轴坐标值：" + point.X + ", y轴坐标值：" + point.Y;
+            //在图表上显示DataLabel
+            column2.DataLabels = true;
             Series.Add(column2);
+
             //实体3
             ColumnSeries column3 = new ColumnSeries();
             column3.Title = "Beef";
             column3.Values = new ChartValues<double> { 2, 4, 6, 7, 8 };
+            //自定义LabelPoint
+            column3.LabelPoint = point => "x轴坐标值：" + point.X + ", y轴坐标值：" + point.Y;
+            //在图表上显示DataLabel
+            column3.DataLabels = true;
             Series.Add(column3);
 
             //坐标轴的Title
@@ -70,10 +83,9 @@ namespace LiveChartsPractice.UserControls
             //设置图例的位置在右侧
             LegendLocation = LegendLocation.Right;
 
-            ChartName = "多实体基本柱状图";
-            Description = "多实体基本柱状图，X轴坐标的Title=月份，Y轴坐标Title=单价，" +
-                "X轴坐标标签是一个字符串数组，y轴的刻度套用了字符串格式化成货币格式, legend图例的位置在右侧。" +
-                "\n\n可以看到不同实体自动填充了不同的颜色。";
+            ChartName = "G-自定义Tooltip中的LablePoint\n    并在图表上显示";
+            Description = "column1.LabelPoint = point => \"x轴坐标值：\"+point.X + \", y轴坐标值：\" + point.Y"
+                +"\n"+ "column1.DataLabels = true";
 
             DataContext = this;
         }

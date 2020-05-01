@@ -32,7 +32,7 @@ namespace LiveChartsPractice
             InitializeComponent();
         }
 
-        private void TabControl_HomePage_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void TabControl_HomePage1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             TabControl tabControl = (TabControl)e.Source;
             TabItem tabItem = tabControl.SelectedItem as TabItem;
@@ -49,6 +49,13 @@ namespace LiveChartsPractice
                     columnControlList.Add(new UC_ColumnChart_2());
                     columnControlList.Add(new UC_ColumnChart_3());
                     columnControlList.Add(new UC_ColumnChart_4());
+                    columnControlList.Add(new UC_ColumnChart_2_A());
+                    columnControlList.Add(new UC_ColumnChart_2_B());
+                    columnControlList.Add(new UC_ColumnChart_2_C());
+                    columnControlList.Add(new UC_ColumnChart_2_D());
+                    columnControlList.Add(new UC_ColumnChart_2_E());
+                    columnControlList.Add(new UC_ColumnChart_2_F());
+                    columnControlList.Add(new UC_ColumnChart_2_G());
                     columnChartTab.UserControlList = columnControlList;
 
                     tabItem.Content = columnChartTab;
@@ -61,6 +68,8 @@ namespace LiveChartsPractice
                     lineControlList.Add(new UC_LineChart_1());
                     lineControlList.Add(new UC_LineChart_2());
                     lineControlList.Add(new UC_LineChart_3());
+                    lineControlList.Add(new UC_LineChart_4());
+                    lineControlList.Add(new UC_LineChart_5());
                     lineChartTab.UserControlList = lineControlList;
 
                     tabItem.Content = lineChartTab;
@@ -91,6 +100,7 @@ namespace LiveChartsPractice
 
                     List<UserControl> pieControlList = new List<UserControl>();
                     pieControlList.Add(new UC_PieChart_1());
+                    pieControlList.Add(new UC_PieChart_1_A());
                     pieChartTab.UserControlList = pieControlList;
 
                     tabItem.Content = pieChartTab;
@@ -135,6 +145,44 @@ namespace LiveChartsPractice
 
                     tabItem.Content = stackedAreaTab;
                     break;
+            }
+        }
+
+        private void TabControl_HomePage2_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            TabControl tabControl = (TabControl)e.Source;
+            TabItem tabItem = tabControl.SelectedItem as TabItem;
+            String tabHead = tabItem.Header.ToString();
+            switch (tabHead)
+            {
+                case "自定义1":
+                    UserControl_TabContent styleTab = new UserControl_TabContent();
+                    styleTab.TabLabelTitle = tabHead;
+
+                    List<UserControl> styleList = new List<UserControl>();
+                    styleList.Add(new UC_ColumnChart_2());
+                    styleList.Add(new UC_ColumnChart_2_A());
+                    styleTab.UserControlList = styleList;
+
+                    tabItem.Content = styleTab;
+                    break;
+            }
+        }
+
+        //切换面板的按钮
+        private void Button_SwitchTabControl_Click(object sender, RoutedEventArgs e)
+        {
+            if (TabControl_HomePage1.Visibility == Visibility.Visible)
+            {
+                TabControl_HomePage1.Visibility = Visibility.Collapsed;
+                TabControl_HomePage2.Visibility = Visibility.Visible;
+                TextBlock_Switch.Text = "基本图表";
+            }
+            else
+            {
+                TabControl_HomePage1.Visibility = Visibility.Visible;
+                TabControl_HomePage2.Visibility = Visibility.Collapsed;
+                TextBlock_Switch.Text = "高级自定义";
             }
         }
     }

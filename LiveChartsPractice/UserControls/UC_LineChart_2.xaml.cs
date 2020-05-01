@@ -88,7 +88,7 @@ namespace LiveChartsPractice.UserControls
             //设置图例的位置在右侧
             LegendLocation = LegendLocation.Right;
 
-            ChartName = "自定义数据结点";
+            ChartName = "自定义数据结点(图例)";
             Description = "Mike线条是默认线条\n" + "Jane线条自定义节点形状和大小\n" +
                            "Nico线条不显示节点\n"+"David线条节点形状自定义";
 

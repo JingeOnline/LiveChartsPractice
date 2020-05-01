@@ -18,16 +18,15 @@ using LiveCharts.Wpf;
 namespace LiveChartsPractice.UserControls
 {
     /// <summary>
-    /// UC_ColumnChart_2.xaml 的交互逻辑
+    /// UC_LineChart_1.xaml 的交互逻辑
     /// </summary>
-    public partial class UC_ColumnChart_2 : UserControl
+    public partial class UC_LineChart_5 : UserControl
     {
-        //窗口下面的描述文字
-        public string Description { get; set; }
-        //图表的名称
-        public string ChartName { get; set; }
+
         //图表
         public SeriesCollection Series { get; set; }
+        //图表的名称
+        public string ChartName { get; set; }
         //坐标轴的Title
         public string Axis_X_Title { get; set; }
         public string Axis_Y_Title { get; set; }
@@ -38,27 +37,30 @@ namespace LiveChartsPractice.UserControls
         //图例的位置
         public LegendLocation LegendLocation { get; set; }
 
-        public UC_ColumnChart_2()
+
+        public UC_LineChart_5()
         {
             InitializeComponent();
-            Series = new SeriesCollection();
+            ChartName = "Tooltip（悬停提示框）自定义";
 
-            //实体1
-            ColumnSeries column1 = new ColumnSeries();
-            column1.Title = "Pork";
-            column1.Values = new ChartValues<double> { 4, 6, 5, 2, 4 };
-            Series.Add(column1);
-            
-            //实体2
-            ColumnSeries column2 = new ColumnSeries();
-            column2.Title = "Lamb";
-            column2.Values = new ChartValues<double> { 5, 9, 4, 8, 5 };
-            Series.Add(column2);
-            //实体3
-            ColumnSeries column3 = new ColumnSeries();
-            column3.Title = "Beef";
-            column3.Values = new ChartValues<double> { 2, 4, 6, 7, 8 };
-            Series.Add(column3);
+            Series = new SeriesCollection
+                    {
+                        new LineSeries
+                        {
+                            Title = "Mike",
+                            Values = new ChartValues<double> { 4, 6, 5, 2 ,4 }
+                        },
+                        new LineSeries
+                        {
+                            Title = "Jane",
+                            Values = new ChartValues<double> { 2, 3, 6, 6 ,2 }
+                        },
+                        new LineSeries
+                        {
+                            Title = "Susan",
+                            Values = new ChartValues<double> { 6, 1, 3, 4 ,5 }
+                        },
+                    };
 
             //坐标轴的Title
             Axis_X_Title = "月份";
@@ -69,13 +71,8 @@ namespace LiveChartsPractice.UserControls
             Axis_Y_LabelFormatter = value => value.ToString("C");
             //设置图例的位置在右侧
             LegendLocation = LegendLocation.Right;
-
-            ChartName = "多实体基本柱状图";
-            Description = "多实体基本柱状图，X轴坐标的Title=月份，Y轴坐标Title=单价，" +
-                "X轴坐标标签是一个字符串数组，y轴的刻度套用了字符串格式化成货币格式, legend图例的位置在右侧。" +
-                "\n\n可以看到不同实体自动填充了不同的颜色。";
-
             DataContext = this;
         }
+
     }
 }

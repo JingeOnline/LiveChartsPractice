@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="LiveCharts" Height="600" Width="1000">
     <Grid Margin="8">
-        <TabControl x:Name="TabControl_HomePage" SelectionChanged="TabControl_HomePage_SelectionChanged">
+        <TabControl x:Name="TabControl_HomePage1" SelectionChanged="TabControl_HomePage1_SelectionChanged">
             <TabItem Header="ColumnChart" x:Name="TabItem_Columnchart"/>
             <TabItem Header="StackedColumn" x:Name="TabItem_StackedColumn"/>
             <TabItem Header="StackedArea" x:Name="TabItem_StackedArea"/>
@@ -19,5 +19,20 @@
             <TabItem Header="AngularGauge" x:Name="TabItem_AngularGauge"/>
             <TabItem Header="Gauge" x:Name="TabItem_Gauge"/>
         </TabControl>
+        
+        <TabControl x:Name="TabControl_HomePage2" SelectionChanged="TabControl_HomePage2_SelectionChanged"
+                    Visibility="Collapsed">
+            <TabItem Header="自定义1" x:Name="xxx1"/>
+            <TabItem Header="自定义2" x:Name="xxx2"/>
+        </TabControl>
+        
+        <Button x:Name="Button_SwitchTabControl" HorizontalAlignment="Right" VerticalAlignment="Top"
+                Click="Button_SwitchTabControl_Click">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE777;" VerticalAlignment="Center"
+                           Margin="4,0"/>
+                <TextBlock Text="高级自定义" VerticalAlignment="Center" x:Name="TextBlock_Switch"/>
+            </StackPanel>
+        </Button>
     </Grid>
 </Window>

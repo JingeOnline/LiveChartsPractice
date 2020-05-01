@@ -20,7 +20,7 @@ namespace LiveChartsPractice.UserControls
     /// <summary>
     /// UC_ColumnChart_2.xaml 的交互逻辑
     /// </summary>
-    public partial class UC_ColumnChart_2 : UserControl
+    public partial class UC_ColumnChart_2_D : UserControl
     {
         //窗口下面的描述文字
         public string Description { get; set; }
@@ -38,7 +38,7 @@ namespace LiveChartsPractice.UserControls
         //图例的位置
         public LegendLocation LegendLocation { get; set; }
 
-        public UC_ColumnChart_2()
+        public UC_ColumnChart_2_D()
         {
             InitializeComponent();
             Series = new SeriesCollection();
@@ -48,7 +48,6 @@ namespace LiveChartsPractice.UserControls
             column1.Title = "Pork";
             column1.Values = new ChartValues<double> { 4, 6, 5, 2, 4 };
             Series.Add(column1);
-            
             //实体2
             ColumnSeries column2 = new ColumnSeries();
             column2.Title = "Lamb";
@@ -70,10 +69,8 @@ namespace LiveChartsPractice.UserControls
             //设置图例的位置在右侧
             LegendLocation = LegendLocation.Right;
 
-            ChartName = "多实体基本柱状图";
-            Description = "多实体基本柱状图，X轴坐标的Title=月份，Y轴坐标Title=单价，" +
-                "X轴坐标标签是一个字符串数组，y轴的刻度套用了字符串格式化成货币格式, legend图例的位置在右侧。" +
-                "\n\n可以看到不同实体自动填充了不同的颜色。";
+            ChartName = "D-收缩坐标轴文字到图表内";
+            Description = "收缩坐标到图表内IsMerged=\"True\"";
 
             DataContext = this;
         }

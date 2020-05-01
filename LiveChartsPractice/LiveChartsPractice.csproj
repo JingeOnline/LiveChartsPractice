@@ -70,6 +70,27 @@
     <Compile Include="UserControls\UC_ColumnChart_1.xaml.cs">
       <DependentUpon>UC_ColumnChart_1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_ColumnChart_2_G.xaml.cs">
+      <DependentUpon>UC_ColumnChart_2_G.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_ColumnChart_2_F.xaml.cs">
+      <DependentUpon>UC_ColumnChart_2_F.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_ColumnChart_2_E.xaml.cs">
+      <DependentUpon>UC_ColumnChart_2_E.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_ColumnChart_2_D.xaml.cs">
+      <DependentUpon>UC_ColumnChart_2_D.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_ColumnChart_2 _C.xaml.cs">
+      <DependentUpon>UC_ColumnChart_2 _C.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_ColumnChart_2_B.xaml.cs">
+      <DependentUpon>UC_ColumnChart_2_B.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_ColumnChart_2 _A.xaml.cs">
+      <DependentUpon>UC_ColumnChart_2 _A.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_ColumnChart_4.xaml.cs">
       <DependentUpon>UC_ColumnChart_4.xaml</DependentUpon>
     </Compile>
@@ -79,6 +100,12 @@
     <Compile Include="UserControls\UC_ColumnChart_2.xaml.cs">
       <DependentUpon>UC_ColumnChart_2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_LineChart_5.xaml.cs">
+      <DependentUpon>UC_LineChart_5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_LineChart_4.xaml.cs">
+      <DependentUpon>UC_LineChart_4.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_LineChart_1.xaml.cs">
       <DependentUpon>UC_LineChart_1.xaml</DependentUpon>
     </Compile>
@@ -87,6 +114,9 @@
     </Compile>
     <Compile Include="UserControls\UC_LineChart_3.xaml.cs">
       <DependentUpon>UC_LineChart_3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_PieChart_1_A.xaml.cs">
+      <DependentUpon>UC_PieChart_1_A.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UC_PieChart_1.xaml.cs">
       <DependentUpon>UC_PieChart_1.xaml</DependentUpon>
@@ -131,6 +161,34 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\UC_ColumnChart_2_G.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\UC_ColumnChart_2_F.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\UC_ColumnChart_2_E.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\UC_ColumnChart_2_D.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\UC_ColumnChart_2 _C.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\UC_ColumnChart_2_B.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\UC_ColumnChart_2 _A.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="UserControls\UC_ColumnChart_4.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -143,6 +201,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\UC_LineChart_5.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\UC_LineChart_4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="UserControls\UC_LineChart_1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -154,6 +220,10 @@
     <Page Include="UserControls\UC_LineChart_3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UC_PieChart_1_A.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="UserControls\UC_PieChart_1.xaml">
       <SubType>Designer</SubType>
