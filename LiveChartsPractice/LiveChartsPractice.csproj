@@ -61,6 +61,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="UC_HeatSeries_1.xaml.cs">
+      <DependentUpon>UC_HeatSeries_1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_AngularGauge_1.xaml.cs">
       <DependentUpon>UC_AngularGauge_1.xaml</DependentUpon>
     </Compile>
@@ -100,6 +103,18 @@
     <Compile Include="UserControls\UC_ColumnChart_2.xaml.cs">
       <DependentUpon>UC_ColumnChart_2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_GeoHeatMap_1.xaml.cs">
+      <DependentUpon>UC_GeoHeatMap_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_LineChart_4_B.xaml.cs">
+      <DependentUpon>UC_LineChart_4_B.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_LineChart_4_A.xaml.cs">
+      <DependentUpon>UC_LineChart_4_A.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_LineChart_6.xaml.cs">
+      <DependentUpon>UC_LineChart_6.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_LineChart_5.xaml.cs">
       <DependentUpon>UC_LineChart_5.xaml</DependentUpon>
     </Compile>
@@ -124,6 +139,9 @@
     <Compile Include="UserControls\UC_RowChart_1.xaml.cs">
       <DependentUpon>UC_RowChart_1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_ScatterPlot_1.xaml.cs">
+      <DependentUpon>UC_ScatterPlot_1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_SolidGauge_1.xaml.cs">
       <DependentUpon>UC_SolidGauge_1.xaml</DependentUpon>
     </Compile>
@@ -132,6 +150,9 @@
     </Compile>
     <Compile Include="UserControls\UC_StackedColumnChart_1.xaml.cs">
       <DependentUpon>UC_StackedColumnChart_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_StepLine_1.xaml.cs">
+      <DependentUpon>UC_StepLine_1.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserControl_TabContent.xaml.cs">
       <DependentUpon>UserControl_TabContent.xaml</DependentUpon>
@@ -149,6 +170,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="UC_HeatSeries_1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\UC_AngularGauge_1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -201,6 +226,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\UC_GeoHeatMap_1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UC_LineChart_4_B.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\UC_LineChart_4_A.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\UC_LineChart_6.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="UserControls\UC_LineChart_5.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -233,6 +274,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\UC_ScatterPlot_1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\UC_SolidGauge_1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -242,6 +287,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\UC_StackedColumnChart_1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UC_StepLine_1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -276,6 +325,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Maps\World.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\luzhishen.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

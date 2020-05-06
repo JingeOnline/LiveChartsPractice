@@ -13,8 +13,10 @@
             <TabItem Header="StackedColumn" x:Name="TabItem_StackedColumn"/>
             <TabItem Header="StackedArea" x:Name="TabItem_StackedArea"/>
             <TabItem Header="LineChart" x:Name="TabItem_Linechart"/>
+            <TabItem Header="StepLine" x:Name="TabItem_StepLine"/>
             <TabItem Header="RowChart" x:Name="TabItem_Rowchart"/>
             <TabItem Header="BubbleChart" x:Name="TabItem_Bubblechart"/>
+            <TabItem Header="ScatterPlot" x:Name="TabItem_ScatterPlot"/>
             <TabItem Header="PieChart" x:Name="TabItem_PieChart"/>
             <TabItem Header="AngularGauge" x:Name="TabItem_AngularGauge"/>
             <TabItem Header="Gauge" x:Name="TabItem_Gauge"/>
@@ -22,8 +24,8 @@
         
         <TabControl x:Name="TabControl_HomePage2" SelectionChanged="TabControl_HomePage2_SelectionChanged"
                     Visibility="Collapsed">
-            <TabItem Header="自定义1" x:Name="xxx1"/>
-            <TabItem Header="自定义2" x:Name="xxx2"/>
+            <TabItem Header="HeatSeries" x:Name="TabItem_HeatSeries"/>
+            <TabItem Header="GeoHeatMap" x:Name="TabItem_GeoHeatMap"/>
         </TabControl>
         
         <Button x:Name="Button_SwitchTabControl" HorizontalAlignment="Right" VerticalAlignment="Top"
@@ -31,7 +33,7 @@
             <StackPanel Orientation="Horizontal">
                 <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE777;" VerticalAlignment="Center"
                            Margin="4,0"/>
-                <TextBlock Text="高级自定义" VerticalAlignment="Center" x:Name="TextBlock_Switch"/>
+                <TextBlock Text="Next Page" VerticalAlignment="Center" x:Name="TextBlock_Switch"/>
             </StackPanel>
         </Button>
     </Grid>

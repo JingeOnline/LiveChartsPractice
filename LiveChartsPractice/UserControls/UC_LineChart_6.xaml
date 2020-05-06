@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="LiveChartsPractice.UserControls.UC_LineChart_6"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LiveChartsPractice.UserControls"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <DockPanel>
+            <TextBlock x:Name="TextBlock_Description" Text="{Binding Description}" TextWrapping="Wrap"
+                           DockPanel.Dock="Bottom" Margin="0,8,0,0" FontSize="14"/>
+            <lvc:CartesianChart Series="{Binding Series}" LegendLocation="{Binding LegendLocation}">
+                <lvc:CartesianChart.AxisX>
+                    <lvc:Axis Title="{Binding Axis_X_Title}" Labels="{Binding Axis_X_Labels}"/>
+                </lvc:CartesianChart.AxisX>
+                <lvc:CartesianChart.AxisY>
+                    <lvc:Axis Title="{Binding Axis_Y_Title}" LabelFormatter="{Binding Axis_Y_LabelFormatter}">
+                        <!--设置Section和对应的宽度、颜色、透明度（Label不起作用，bug）-->
+                        <lvc:Axis.Sections>
+                            <lvc:AxisSection Value="0" SectionWidth="2" Label="OK">
+                                <lvc:AxisSection.Fill>
+                                    <SolidColorBrush Color="BlueViolet" Opacity="0.4"/>
+                                </lvc:AxisSection.Fill>
+                            </lvc:AxisSection>
+                            <lvc:AxisSection Value="2" SectionWidth="2" Label="GOOD">
+                                <lvc:AxisSection.Fill>
+                                    <SolidColorBrush Color="Pink" Opacity="0.4"/>
+                                </lvc:AxisSection.Fill>
+                            </lvc:AxisSection>
+                            <lvc:AxisSection Value="4" SectionWidth="2" Label="Excellent">
+                                <lvc:AxisSection.Fill>
+                                    <SolidColorBrush Color="Green" Opacity="0.4"/>
+                                </lvc:AxisSection.Fill>
+                            </lvc:AxisSection>
+                        </lvc:Axis.Sections>
+                    </lvc:Axis>
+                </lvc:CartesianChart.AxisY>
+            </lvc:CartesianChart>
+        </DockPanel>
+    </Grid>
+</UserControl>

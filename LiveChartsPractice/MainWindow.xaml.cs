@@ -70,9 +70,22 @@ namespace LiveChartsPractice
                     lineControlList.Add(new UC_LineChart_3());
                     lineControlList.Add(new UC_LineChart_4());
                     lineControlList.Add(new UC_LineChart_5());
+                    lineControlList.Add(new UC_LineChart_6());
+                    lineControlList.Add(new UC_LineChart_4_A());
+                    lineControlList.Add(new UC_LineChart_4_B());
                     lineChartTab.UserControlList = lineControlList;
 
                     tabItem.Content = lineChartTab;
+                    break;
+                case "StepLine":
+                    UserControl_TabContent stepLineTab = new UserControl_TabContent();
+                    stepLineTab.TabLabelTitle = tabHead;
+
+                    List<UserControl> stepLineList = new List<UserControl>();
+                    stepLineList.Add(new UC_StepLine_1());
+                    stepLineTab.UserControlList = stepLineList;
+
+                    tabItem.Content = stepLineTab;
                     break;
                 case "RowChart":
                     UserControl_TabContent rowChartTab = new UserControl_TabContent();
@@ -93,6 +106,15 @@ namespace LiveChartsPractice
                     bubbleChartTab.UserControlList = bubbleControlList;
 
                     tabItem.Content = bubbleChartTab;
+                    break;
+                case "ScatterPlot":
+                    UserControl_TabContent scatterPlotTab = new UserControl_TabContent();
+                    scatterPlotTab.TabLabelTitle = tabHead;
+
+                    List<UserControl> scatterControlList = new List<UserControl>();
+                    scatterControlList.Add(new UC_ScatterPlot_1());
+                    scatterPlotTab.UserControlList = scatterControlList;
+                    tabItem.Content = scatterPlotTab;
                     break;
                 case "PieChart":
                     UserControl_TabContent pieChartTab = new UserControl_TabContent();
@@ -155,16 +177,24 @@ namespace LiveChartsPractice
             String tabHead = tabItem.Header.ToString();
             switch (tabHead)
             {
-                case "自定义1":
-                    UserControl_TabContent styleTab = new UserControl_TabContent();
-                    styleTab.TabLabelTitle = tabHead;
+                case "HeatSeries":
+                    UserControl_TabContent heatTab = new UserControl_TabContent();
+                    heatTab.TabLabelTitle = tabHead;
 
-                    List<UserControl> styleList = new List<UserControl>();
-                    styleList.Add(new UC_ColumnChart_2());
-                    styleList.Add(new UC_ColumnChart_2_A());
-                    styleTab.UserControlList = styleList;
+                    List<UserControl> heatList = new List<UserControl>();
+                    heatList.Add(new UC_HeatSeries_1());
+                    heatTab.UserControlList = heatList;
 
-                    tabItem.Content = styleTab;
+                    tabItem.Content = heatTab;
+                    break;
+                case "GeoHeatMap":
+                    UserControl_TabContent geoTab = new UserControl_TabContent();
+                    geoTab.TabLabelTitle = tabHead;
+                    List<UserControl> geoList = new List<UserControl>();
+                    geoList.Add(new UC_GeoHeatMap_1());
+                    geoTab.UserControlList = geoList;
+
+                    tabItem.Content = geoTab;
                     break;
             }
         }
@@ -176,13 +206,13 @@ namespace LiveChartsPractice
             {
                 TabControl_HomePage1.Visibility = Visibility.Collapsed;
                 TabControl_HomePage2.Visibility = Visibility.Visible;
-                TextBlock_Switch.Text = "基本图表";
+                TextBlock_Switch.Text = "Last Page";
             }
             else
             {
                 TabControl_HomePage1.Visibility = Visibility.Visible;
                 TabControl_HomePage2.Visibility = Visibility.Collapsed;
-                TextBlock_Switch.Text = "高级自定义";
+                TextBlock_Switch.Text = "Next Page";
             }
         }
     }

@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="LiveChartsPractice.UserControls.UC_LineChart_4_B"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LiveChartsPractice.UserControls"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <DockPanel>
+            <TextBlock x:Name="TextBlock_Description" Text="{Binding Description}" TextWrapping="Wrap"
+                           DockPanel.Dock="Bottom" Margin="0,8,0,0" FontSize="14"/>
+            <lvc:CartesianChart Series="{Binding Series}" LegendLocation="{Binding LegendLocation}">
+                <lvc:CartesianChart.AxisX>
+                    <lvc:Axis Title="{Binding Axis_X_Title}" Labels="{Binding Axis_X_Labels}"/>
+                </lvc:CartesianChart.AxisX>
+                <lvc:CartesianChart.AxisY>
+                    <lvc:Axis Title="{Binding Axis_Y_Title}" LabelFormatter="{Binding Axis_Y_LabelFormatter}"/>
+                    <lvc:Axis x:Name="RedAxis" Title="Y轴1" Foreground="Red" Position="RightTop" MinValue="0">
+                        <lvc:Axis.Separator>
+                            <lvc:Separator Step="10"/>
+                        </lvc:Axis.Separator>
+                    </lvc:Axis>
+                    <lvc:Axis x:Name="BlueAxis" Title="Y轴2" Foreground="Blue" Position="RightTop">
+                        <lvc:Axis.Separator>
+                            <lvc:Separator Step="100"/>
+                        </lvc:Axis.Separator>
+                    </lvc:Axis>
+                </lvc:CartesianChart.AxisY>
+            </lvc:CartesianChart>
+        </DockPanel>
+    </Grid>
+</UserControl>

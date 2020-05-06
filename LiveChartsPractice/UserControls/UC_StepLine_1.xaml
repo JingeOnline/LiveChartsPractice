@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="LiveChartsPractice.UserControls.UC_StepLine_1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LiveChartsPractice.UserControls"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <DockPanel>
+            <TextBlock x:Name="TextBlock_Description" Text="{Binding Description}" TextWrapping="Wrap"
+                           DockPanel.Dock="Bottom" Margin="0,8,0,0" FontSize="14"/>
+            <lvc:CartesianChart LegendLocation="Bottom">
+                <lvc:CartesianChart.AxisX>
+                    <!--在前端书写坐标轴Labels，值之间用英文逗号分隔-->
+                    <lvc:Axis Title="横坐标" Labels="一月,二月,三月,四月,五月,六月"></lvc:Axis>
+                </lvc:CartesianChart.AxisX>
+                <lvc:CartesianChart.Series>
+                    <lvc:StepLineSeries Values="1,2,3,4,5" Title="Pork"/>
+                    <!--设置线条粗细-->
+                    <lvc:StepLineSeries Values="3,4,2,3,1" Title="Beef" StrokeThickness="5" />
+                    <!--设置垂直线条颜色为透明-->
+                    <lvc:StepLineSeries Values="6,5,4,3,2" Title="Lamb" AlternativeStroke="Transparent"/>
+                </lvc:CartesianChart.Series>
+            </lvc:CartesianChart>
+        </DockPanel>
+    </Grid>
+</UserControl>
