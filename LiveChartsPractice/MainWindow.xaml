@@ -31,8 +31,8 @@
         <Button x:Name="Button_SwitchTabControl" HorizontalAlignment="Right" VerticalAlignment="Top"
                 Click="Button_SwitchTabControl_Click">
             <StackPanel Orientation="Horizontal">
-                <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE777;" VerticalAlignment="Center"
-                           Margin="4,0"/>
+                <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE72A;" VerticalAlignment="Center"
+                           Margin="4,0" x:Name="TextBlock_SwitchIcon"/>
                 <TextBlock Text="Next Page" VerticalAlignment="Center" x:Name="TextBlock_Switch"/>
             </StackPanel>
         </Button>

@@ -207,12 +207,14 @@ namespace LiveChartsPractice
                 TabControl_HomePage1.Visibility = Visibility.Collapsed;
                 TabControl_HomePage2.Visibility = Visibility.Visible;
                 TextBlock_Switch.Text = "Last Page";
+                TextBlock_SwitchIcon.Text = "\xE72B";
             }
             else
             {
                 TabControl_HomePage1.Visibility = Visibility.Visible;
                 TabControl_HomePage2.Visibility = Visibility.Collapsed;
                 TextBlock_Switch.Text = "Next Page";
+                TextBlock_SwitchIcon.Text = "\xE72A";
             }
         }
     }
